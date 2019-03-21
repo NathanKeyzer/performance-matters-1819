@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <% include partials/head %>
+  </head>
+  <body>
+    <header>
+      <% include partials/header %>
+      <a href="/"> Terug naar overzicht</a>
+    </header>
+
+    <section class="artistInfo">
+      <a href="<%= artist.url %>"><img src="<%= artist.image[5]['#text'] ? artist.image[5]['#text'] : '/images/174.png' %>" alt=""></a>
+      <div class="">
+        <h2><%= artist.name %></h2>
+        <p><%= tags %></p>
+        <p><%- artist.bio.summary%></p>
+
+        <p><%= similar %></p>
+
+      </div>
+    </section>
+
+    <script type="module" src="js/main.js"></script>
+
+    <footer>
+      <% include partials/footer%>
+    </footer>
+  </body>
+
+</html>

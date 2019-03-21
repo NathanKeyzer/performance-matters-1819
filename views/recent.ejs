@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <% include partials/head %>
+  </head>
+  <body>
+    <header>
+      <% include partials/header %>
+    </header>
+<% tracks.forEach(function (track) { %>
+    <section class="nowPlaying">
+      <a href="${track.url}"><img src="<%= track.image[2]['#text'] ? track.image[2]['#text'] : '/images/174.png' %>" alt=""></a>
+      <div class="">
+        <h2><%= track.name %></h2>
+        <p><%= track.artist["#text"] %></p>
+        <p><%= track.date ? track.date['#text'] : 'Now Playing' %></p>
+      </div>
+    </section>
+<% }) %>
+    <script type="module" src="js/main.js"></script>
+
+    <footer>
+      <% include partials/footer%>
+    </footer>
+  </body>
+
+</html>
