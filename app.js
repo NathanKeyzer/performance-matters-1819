@@ -14,13 +14,20 @@ const url = `https://ws.audioscrobbler.com/2.0/?method=user.gettoptracks&user=${
 const recentsong = `https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=nathankeyzer&api_key=${key}&format=json&page=1`;
 const artistinfo = `http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=Drake&api_key=${key}&format=json`;
 
-app.use(express.static(path.join(__dirname, "public")));
+app.use((req, res, next) => {
+  // todo: set cache header to 1 year
+  res.setHeader("Cache-Control", "max-age=" + 365 * 24 * 60 * 60);
+  next();
+});
+//set cache control, compress,
+app.use(express.static("public"));
 app.use(
   session({
     store: new FileStore(path),
     secret: "keyboard cat"
   })
 );
+
 app.set("view engine", "ejs");
 app.set("views", "views");
 
@@ -33,7 +40,7 @@ app.get("/", async function(req, res) {
   res.render("index.ejs", {
     tracks: tracks.data.toptracks.track,
     user: user,
-    artist: tracks.data.toptracks.track[1].artist
+    artist: tracks.data.toptracks.track[0].artist
   });
 });
 app.get("/recent", async function(req, res) {
@@ -43,6 +50,11 @@ app.get("/recent", async function(req, res) {
   res.render("recent.ejs", {
     tracks: nowplaying.data.recenttracks.track,
     user: nowplaying.data.recenttracks["@attr"].user
+  });
+});
+app.get("/offline", function(req, res) {
+  res.render("offline", {
+    user: user
   });
 });
 //toptracks pagina
@@ -64,7 +76,7 @@ app.get("/data", (req, res) => {
     });
 });
 // dit is de detail pagina
-app.get("/:artist", async function(req, res) {
+app.get("/artist/:artist", async function(req, res) {
   let artist = await axios.get(artistinfo);
   console.log(artist.data);
 

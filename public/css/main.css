@@ -1,10 +1,5 @@
-/*
-========================================================
-    GENERAL
-========================================================
-*/
 body {
-  background-color: #b90000;
+  background-color: #fbfbfb;
   margin: 0;
   overflow-x: hidden;
 }
@@ -14,7 +9,7 @@ main {
   justify-content: center;
 }
 header {
-  background-color: black;
+  background-color: #000;
   width: 100%;
   height: auto;
   padding: 2em;
@@ -23,8 +18,8 @@ header {
 }
 header a {
   font-family: Circular, Helvetica, Arial, sans-serif;
-  color: white;
-  font-weight: bold;
+  color: #fff;
+  font-weight: 700;
   font-size: 1em;
   text-decoration: none;
   padding: 10px;
@@ -38,7 +33,7 @@ section {
   justify-content: flex-start;
   transition: position 2s;
   border-radius: 1rem;
-  background-color: white;
+  background-color: #b90000;
   margin: 0 1em 1em 0;
 }
 .nowPlaying:first-of-type {
@@ -74,18 +69,13 @@ div {
 img {
   border-radius: 1rem 0 0 1rem;
 }
-/*
-========================================================
-    FONT
-========================================================
-*/
 h1 {
-  color: white;
+  color: #fff;
   font-family: Circular, Helvetica, Arial, sans-serif;
   font-size: 2em;
 }
 h2 {
-  color: #b90000;
+  color: #fff;
   font-family: Circular, Helvetica, Arial, sans-serif;
   font-size: 1em;
   padding: 0 5px;
@@ -94,7 +84,7 @@ h2 {
 p {
   font-family: Circular, Helvetica, Arial, sans-serif;
   font-size: 1em;
-  color: #000;
+  color: #fff;
   flex-direction: column;
   justify-content: space-between;
   padding: 0 5px;
@@ -103,17 +93,12 @@ p {
 section p {
   font-family: Circular, Helvetica, Arial, sans-serif;
   font-size: 1em;
-  color: #000;
+  color: #fff;
   flex-direction: column;
   justify-content: space-between;
   padding: 0 5px;
   margin: 5px 0 0 0;
 }
-/*
-========================================================
-    loader
-========================================================
-*/
 .spinner {
   width: 40px;
   height: 40px;
@@ -130,7 +115,6 @@ section p {
   position: absolute;
   top: 0;
   left: 0;
-
   -webkit-animation: sk-bounce 2s infinite ease-in-out;
   animation: sk-bounce 2s infinite ease-in-out;
 }
