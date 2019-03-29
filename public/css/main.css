@@ -1,5 +1,5 @@
 body {
-  background-color: #fbfbfb;
+  background-color: #b90000;
   margin: 0;
   overflow-x: hidden;
 }
@@ -33,7 +33,7 @@ section {
   justify-content: flex-start;
   transition: position 2s;
   border-radius: 1rem;
-  background-color: #b90000;
+  background-color: white;
   margin: 0 1em 1em 0;
 }
 .nowPlaying:first-of-type {
@@ -75,7 +75,7 @@ h1 {
   font-size: 2em;
 }
 h2 {
-  color: #fff;
+  color: #b90000;
   font-family: Circular, Helvetica, Arial, sans-serif;
   font-size: 1em;
   padding: 0 5px;
@@ -84,7 +84,7 @@ h2 {
 p {
   font-family: Circular, Helvetica, Arial, sans-serif;
   font-size: 1em;
-  color: #fff;
+  color: #b90000;
   flex-direction: column;
   justify-content: space-between;
   padding: 0 5px;
@@ -93,7 +93,7 @@ p {
 section p {
   font-family: Circular, Helvetica, Arial, sans-serif;
   font-size: 1em;
-  color: #fff;
+  color: #b90000;
   flex-direction: column;
   justify-content: space-between;
   padding: 0 5px;
