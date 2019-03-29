@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const api_helper = require("./API");
-const port = 3000;
+const port = process.env.PORT || 3000;
 const path = require("path");
 const fs = require("fs");
 const user = "NathanKeyzer";
@@ -93,6 +93,4 @@ app.get("/test", function(req, res) {
 });
 //app luisterd naar de port
 
-app.listen(process.env.PORT || 3000, () =>
-  console.log(`Example app listening on port ${port}!`)
-);
+app.listen(port, () => console.log(`Example app listening on port ${port}!`));
