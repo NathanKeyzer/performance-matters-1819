@@ -33,7 +33,7 @@ section {
   justify-content: flex-start;
   transition: position 2s;
   border-radius: 1rem;
-  background-color: white;
+  background-color: #fff;
   margin: 0 1em 1em 0;
 }
 .nowPlaying:first-of-type {

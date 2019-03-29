@@ -1,5 +1,7 @@
 # Performance Matters @cmda-minor-web · 2018-2019
 
+[Live demo](#)
+![application](https://github.com/NathanKeyzer/performance-matters-1819/blob/master/public/images/app.png?raw=true)
 This is my music web application
 With this course i made my web application based on the last.fm api server side. Therefore is used node and express.
 
@@ -8,15 +10,23 @@ I made some changes for performance.
 Run a audit via chrome browser on a slow 3g connection.
 ![audit result](https://raw.githubusercontent.com/NathanKeyzer/performance-matters-1819/master/public/images/audit.png)
 
-## Leerdoelen
+perceived performance: Refers to how quickly a software feature appears to perform its task
 
-- _Je weet het verschil tussen client side en server side rendering en kan server side rendering toepassen_
-- _Je begrijpt hoe de critical render path werkt, en hoe je deze kan optimaliseren voor een betere runtime en/of perceived performance._
-- _Je begrijpt hoe een Service Worker werkt en kan deze in jou applicatie implementeren._
+First view: First View is a web performance metric that represents what a first-time visitor to a webpage will experience.
+
+Repeat view: Is a repeated visit to the application where some files are stored in the cache.
+
+Image loading: Space that is reserved for the image to load.
+
+Runtime performance: Often runtime performance can be improved through minor changes to your source programs. The amount of improvement each change provides depends on
+How your program is organized
+The functions and language constructs your program uses
+
+Time to first byte: Time To First Byte identifies the time at which your server sends a response
 
 ### Week 1 - Server Side rendering
 
-during this week i build my webapp from client side to serverside. I did this with node and express.
+During this week i build my webapp from client side to serverside. I did this with node and express.
 Doing this took me a few days to get along with node and express.
 
 ### Week 2 - Critical Rendering Path
@@ -46,7 +56,15 @@ First of al was to make my app from client side to server side. Build it with no
 
 ### Time to first byte
 
+Time To First Byte identifies the time at which your server sends a response [source](https://developers.google.com/web/tools/lighthouse/audits/ttfb)
 ![first-run](https://github.com/NathanKeyzer/performance-matters-1819/blob/master/public/images/run1.png?raw=true)
+
+#### Second run
+
+![second-run](https://github.com/NathanKeyzer/performance-matters-1819/blob/master/public/images/run2.png?raw=true)
+
+![service-worker](https://github.com/NathanKeyzer/performance-matters-1819/blob/master/public/images/lastaudit.png?raw=true)
+Last run with the service worker.
 
 ### Audits
 
@@ -65,3 +83,5 @@ audit number 2![second-audit](https://github.com/NathanKeyzer/performance-matter
 Last audit made with on most things a high score mosttly to optimize the progressive web app
 there are stil some optimalisations to do as you can see
 ![last-audit](https://github.com/NathanKeyzer/performance-matters-1819/blob/master/public/images/result1.png?raw=true)
+
+[MIT](LICENCE) © [Nathan Keyzer](https://nathankeyzer.nl)
