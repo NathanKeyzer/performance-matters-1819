@@ -1,6 +1,6 @@
 # Performance Matters @cmda-minor-web · 2018-2019
 
-[Live demo](https://performancemusic.herokuapp.com/)
+[Live demo](https://performancemusic.herokuapp.com/recent)
 ![application](https://github.com/NathanKeyzer/performance-matters-1819/blob/master/public/images/app.png?raw=true)
 This is my music web application. For this course i made my web application based on the last.fm api server side.
 
